@@ -1,8 +1,13 @@
 import 'dotenv/config'
 import connectDB from "./db/index.js"
 import app from './app.js'
-const port = process.env.PORT  || 5000
+import dotenv from 'dotenv'
+
+
+const port = process.env.PORT  || 6000
+dotenv.config()
 connectDB()
+
 .then(()=>{
 
     app.listen( port , ()=>{

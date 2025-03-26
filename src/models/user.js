@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const userSchema = new mongoose.Schema({
-  
+ 
   firstName: {
     type: String,
     required: [true, 'First name is required'],
@@ -34,13 +34,4 @@ const userSchema = new mongoose.Schema({
 
 export const User = mongoose.model('User', userSchema);
 
-// Sample Users
-const sampleUsers = [
-  { id: 1, firstName: "Alice", lastName: "Johnson", email: "alice@example.com", age: 30 },
-  { id: 2, firstName: "Bob", lastName: "Smith", email: "bob@example.com", age: 25 },
-  { id: 3, firstName: "Charlie", lastName: "Brown", email: "charlie@example.com", age: 35 },
-  { id: 4, firstName: "David", lastName: "White", email: "david@example.com", age: 40 },
-  { id: 5, firstName: "Eve", lastName: "Black", email: "eve@example.com", age: 28 }
-];
-
-export default sampleUsers;
+export default User;
